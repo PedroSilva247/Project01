@@ -156,3 +156,10 @@
     background-color: #3d3d3d;
     color:  #b0b0b1;
 }
+
+.checkbox {
+    position: absolute;
+    display: inline-block;
+    top: 600px;
+    font-size: 14pt;
+}

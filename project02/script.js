@@ -1,6 +1,8 @@
 
 let time = 0
-let positions = []
+let positions = [
+    
+]
 function redWins() {
     let endPage = document.querySelector("div#endPage")
     let winner = document.querySelector("h1#winner")
@@ -139,30 +141,66 @@ function win() {
 
 function p0() {
     play(0)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p1() {
     play(1)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p2() {
     play(2)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p3() {
     play(3)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p4() {
     play(4)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p5() {
     play(5)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p6() {
     play(6)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p7() {
     play(7)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function p8() {
     play(8)
+    let checkBox = document.querySelector("input#checkBoxComputer")
+    // if (checkBox.checked) {
+    //     play(computer(positions))
+    // }
 }
 function play(pos) {
     let p = [
@@ -177,7 +215,7 @@ function play(pos) {
         document.querySelector("img#p8")
     ]
     if (positions[pos] == 0 || positions[pos] == 1){
-
+        
     } else {
         if (time == 0) {
             p[pos].src = "images/X.png"
@@ -187,11 +225,128 @@ function play(pos) {
             positions[pos] = 1
         }
         
+        win()
+        
         if (time == 0) {
             time = 1
         } else {
             time = 0
         }
-        win()
+        let checkBox = document.querySelector("input#checkBoxComputer")
+        if (time == 1 && checkBox.checked) {
+            play(computer(positions))
+        }
     }
+}
+
+function computer(ps) {
+
+    
+    switch (true) {
+        case ps[0] == ps[1] && ps[0] != undefined:
+            if (ps[2] != 1 && ps[2] != 0) {
+                return 2
+            }
+        case ps[1] == ps[2] && ps[1] != undefined:
+            if (ps[0] != 1 && ps[0] != 0) {
+                return 0
+            }
+        case ps[0] == ps[2] && ps[0] != undefined: 
+            if (ps[1] != 1 && ps[1] != 0) {
+                return 1
+            }
+        case ps[3] == ps[4] && ps[3] != undefined: 
+            if (ps[5] != 1 && ps[5] != 0) {
+                return 5
+            }
+        case ps[4] == ps[5] && ps[4] != undefined: 
+            if (ps[3] != 1 && ps[3] != 0) {
+                return 3
+            } 
+        case ps[3] == ps[5] && ps[3] != undefined: 
+            if (ps[4] != 1 && ps[4] != 0) {
+                return 4
+            }
+        case ps[6] == ps[7] && ps[6] != undefined: 
+            if (ps[8] != 1 && ps[8] != 0) {
+                return 8
+            } 
+        case ps[7] == ps[8] && ps[7] != undefined: 
+            if (ps[6] != 1 && ps[6] != 0) {
+                return 6
+            }
+        case ps[6] == ps[8] && ps[6] != undefined: 
+            if (ps[7] != 1 && ps[7] != 0) {
+                return 7
+            }
+        case ps[0] == ps[3] && ps[0] != undefined: 
+            if (ps[6] != 1 && ps[6] != 0) {
+                return 6
+            } 
+        case ps[3] == ps[6] && ps[3] != undefined: 
+            if (ps[0] != 1 && ps[0] != 0) {
+                return 0
+            }
+        case ps[0] == ps[6] && ps[0] != undefined: 
+            if (ps[3] != 1 && ps[3] != 0) {
+                return 3
+            }
+        case ps[1] == ps[4] && ps[1] != undefined: 
+            if (ps[7] != 1 && ps[7] != 0) {
+                return 7
+            }
+        case ps[4] == ps[7] && ps[4] != undefined: 
+            if (ps[1] != 1 && ps[1] != 0) {
+                return 1
+            } 
+        case ps[1] == ps[7] && ps[1] != undefined: 
+            if (ps[4] != 1 && ps[4] != 0) {
+                return 4
+            } 
+        case ps[2] == ps[5] && ps[2] != undefined: 
+            if (ps[8] != 1 && ps[8] != 0) {
+                return 8
+            } 
+        case ps[2] == ps[8] && ps[2] != undefined: 
+            if (ps[5] != 1 && ps[5] != 0) {
+                return 5
+            } 
+        case ps[5] == ps[8] && ps[5] != undefined: 
+            if (ps[2] != 1 && ps[2] != 0) {
+                return 2
+            } 
+        case ps[0] == ps[4] && ps[0] != undefined: 
+            if (ps[8] != 1 && ps[8] != 0) {
+                return 8
+            } 
+        case ps[4] == ps[8] && ps[4] != undefined: 
+            if (ps[0] != 1 && ps[0] != 0) {
+                return 0
+            } 
+        case ps[0] == ps[8] && ps[0] != undefined: 
+            if (ps[4] != 1 && ps[4] != 0) {
+                return 4
+            } 
+        case ps[2] == ps[4] && ps[2] != undefined: 
+            if (ps[6] != 1 && ps[6] != 0) {
+                return 6
+            } 
+            
+        case ps[4] == ps[6] && ps[4] != undefined: 
+            if (ps[2] != 1 && ps[2] != 0) {
+                return 2
+            } 
+        case ps[2] == ps[6] && ps[2] != undefined: 
+            if (ps[4] != 1 && ps[4] != 0) {
+                return 4
+            }
+        default:
+            for (let cont=0;cont<9;cont++) {
+                if (ps[cont] != 0 && ps[cont] != 1){
+                    return cont
+                }
+            }
+            break
+    }
+    
 }
