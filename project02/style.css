@@ -13,6 +13,7 @@
 .symbols {
     height: 500px; width: 500px;
     position: absolute;
+    
 
 }
 
@@ -23,7 +24,13 @@
     height: 162px; width: 162px;
     position: absolute;
     display: inline-block;
+    cursor: pointer;
+
 }
+.p:hover {
+    background-color: #9b9b9b1e;
+}
+
 .p0 {
     left: 0px;
     top: 0px;
@@ -65,14 +72,87 @@
     position: fixed;
     top: 0px;
     visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blue {
     background-color: #110073ad;
     visibility: visible;
+    color: #110073;
 }
 
 .red {
-    background-color: #690000ad;
+    background-color: #570000ad;
     visibility: visible;
+    color: #460000;
+}
+.tie {
+    background-color: #808080ad;
+    visibility: visible;
+    color: #363636;
+}
+
+.winner {
+    position: fixed;
+    top: 380px;
+    font-size: 42pt;
+    
+}
+
+.winnerRed {
+    color: #460000;
+}
+
+.winnerBlue {
+    color: #110073;
+}
+.winnerTie {
+    color: #3d3d3d;
+}
+
+.endBlock {
+    position: fixed;
+    height: 500px; width: 400px;
+    top: 280px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BlockRed {
+    background-color: #990000;
+    
+}
+.BlockBlue {
+    background-color: #2f12d8;
+
+}
+.BlockTie {
+    background-color: #707070;
+}
+
+.playAgain {
+    cursor: pointer;
+    border: 0px;
+    font-size: 12.5pt;
+    width: 130px; height: 50px;
+    position: fixed;
+    top: 580px;
+    padding: 15px;
+    border-radius: 25px;
+}
+.playAgainRed {
+    background-color: #460000;
+    color:  #c47272;
+}
+.playAgainBlue {
+    background-color: #110073;
+    color:  #6c61ad;
+}
+.playAgainTie {
+    background-color: #3d3d3d;
+    color:  #b0b0b1;
 }
