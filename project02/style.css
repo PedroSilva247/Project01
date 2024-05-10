@@ -1,0 +1,78 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page1 {
+    height: 500px; width: 500px;
+    position: relative;
+
+}
+
+.symbols {
+    height: 500px; width: 500px;
+    position: absolute;
+
+}
+
+.tabuleiro {
+    position: absolute;
+}
+.p {
+    height: 162px; width: 162px;
+    position: absolute;
+    display: inline-block;
+}
+.p0 {
+    left: 0px;
+    top: 0px;
+}
+.p1 {
+    left: 169px;
+    top: 0px;
+}
+.p2 {
+    left: 338px;
+    top: 0px;
+}
+.p3 {
+    left: 0px;
+    top: 168px;
+}
+.p4 {
+    left: 169px;
+    top: 168px;
+}
+.p5 {
+    left: 338px;
+    top: 168px;
+}
+.p6 {
+    left: 0px;
+    top: 337px;
+}
+.p7 {
+    left: 169px;
+    top: 337px;
+}
+.p8 {
+    left: 338px;
+    top: 337px;
+}
+.endPage {
+    height: 100%; width: 100%;
+    position: fixed;
+    top: 0px;
+    visibility: hidden;
+}
+
+.blue {
+    background-color: #110073ad;
+    visibility: visible;
+}
+
+.red {
+    background-color: #690000ad;
+    visibility: visible;
+}
